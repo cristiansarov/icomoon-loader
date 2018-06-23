@@ -1,6 +1,6 @@
 {
   "name": "icomoon-loader",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Webpack loader for downloading font files from development icomoon link to production build",
   "main": "index.js",
   "scripts": {
