@@ -50,6 +50,18 @@ And on **PRODUCTION** environment, exclude the ``icomoon.css`` file from regular
 **If you don't exclude it from the rest of css files, it will be loaded both on icomoon link and locally.**
 
 
+## Config
+By default, the loader will copy font files on ``fonts`` folder on build path. To change this, add ``fontsPath`` config
+property to the loader:
+```js
+{
+   test: /\.css$/,
+   use: ['raw-loader!icomoon-loader?fontsPath=assets'],
+   include: ['path/to/icomoon.css']
+}
+```
+
+
 ## Conclusion
 Use icomoon development link locally and this icomoon loader when you create the build for production, preventing
 icomoon changes to be reflected in the production build.
