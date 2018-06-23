@@ -22,7 +22,7 @@ module.exports = function (content) {
       const urls = content.match(/url\(\'(.*?)\'\)/g).filter(i=>!i.includes('iefix')).map(i=>i.replace(`url('`, '').replace(`')`, ''));
 
       // Download all font files
-      Promise.all(urls.map(url => request(url))).then(fontContents => {
+      Promise.all(urls.map(url => request({url, encoding: null}))).then(fontContents => {
 
         // Replace the public urls with local urls
         content = content.replace(new RegExp(icomoonProjectBaseUrl, 'g'), fontsPath);
