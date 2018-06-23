@@ -69,4 +69,4 @@ icomoon changes to be reflected in the production build.
 
 ## License
 
-#### [MIT](./LICENSE)
+#### [MIT](./LICENCE)
